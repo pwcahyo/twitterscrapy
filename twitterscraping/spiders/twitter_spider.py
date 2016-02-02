@@ -33,7 +33,7 @@ class TwitterSpider(Spider):
 			data = json.loads(response.body)
 			itemselector = Selector(text=data['items_html']).xpath('//div[@class="content"]')
 			max_position = data['min_position']
-			yield Request("https://twitter.com/i/search/timeline?f=tweets&vertical=default&q=%22demam%20berdarah%22%20OR%20dbd%20OR%20dhf%20OR%20%22dengue%20fever%22%20OR%20%22dengue%20hemorrhagic%22%20OR%20%22sakit%20db%22%20lang%3Aid%20since%3A"+self.start+"%20until%3A"+self.end+"&src=typd&include_available_features=1&include_entities=1&last_note_ts=103&max_position="+max_position+"&reset_error_state=false", 
+			yield Request("https://twitter.com/i/search/timeline?f=tweets&vertical=default&q=%22demam%20berdarah%22%20OR%20dbd%20OR%20dhf%20OR%20%22dengue%20fever%22%20OR%20%22dengue%20hemorrhagic%22%20OR%20%22sakit%20db%22%20lang%3Aid%20since%3A"+self.start+"%20until%3A"+self.end+"&src=typd&include_available_features=1&include_entities=1&max_position="+max_position+"&reset_error_state=false", 
 					callback=self.parse, 
 					method="GET",)
 		
