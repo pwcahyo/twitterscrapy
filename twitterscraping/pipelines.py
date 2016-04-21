@@ -10,7 +10,7 @@ from scrapy.exceptions import DropItem
 from scrapy import log
 
 class TwitterscrapingPipeline(object):
-	collection_name = 'tiganol'
+	collection_name = 'coba'
 	def __init__(self, mongo_uri, mongo_db):
 		self.mongo_uri = mongo_uri
 		self.mongo_db = mongo_db

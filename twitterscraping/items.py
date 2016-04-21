@@ -17,6 +17,7 @@ class TwitterscrapingItem(scrapy.Item):
 	max_position = scrapy.Field()
 	hash_tags = scrapy.Field()
 	time_tweet = scrapy.Field()
+	id_status = scrapy.Field()
 	lang = scrapy.Field()
 	retweets = scrapy.Field()
 	favorite = scrapy.Field()
